@@ -838,6 +838,7 @@ public class View
         T result = default(T);
         using (var memoryStream = new MemoryStream())
         {
+
             var formatter = new BinaryFormatter();
             formatter.Serialize(memoryStream, obj);
             memoryStream.Seek(0, SeekOrigin.Begin);
